@@ -7,7 +7,7 @@ import MalifyImage from "@/public/images/malify-extension.png"
 //PfRaqPY0pzNz39Fc
 export default function LandingPage() {
   return (
-    /*<div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
@@ -237,7 +237,7 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
-    </div>*/
+    </div>
   )
 }
 
