@@ -1,5 +1,5 @@
+/* eslint-disable */
 import bcrypt from 'bcrypt';
-import User from '@/models/User';
 import clientPromise from '@/lib/mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
 

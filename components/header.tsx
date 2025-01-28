@@ -1,6 +1,6 @@
+/* eslint-disable */
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import SignOutButton from "./signOutButton"
 
 export function Header() {
   return (

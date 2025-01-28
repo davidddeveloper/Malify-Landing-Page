@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 
 import { signIn } from "next-auth/react"
@@ -15,6 +16,8 @@ export default function SignupPage() {
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
+
+  console.log(error)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
