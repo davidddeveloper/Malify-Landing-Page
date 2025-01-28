@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge"
 import { Bell, Mail, Zap, Clock, Bot, Shield } from "lucide-react"
 import Image from "next/image"
 import MalifyImage from "@/public/images/malify-extension.png"
+import SignOutButton from "@/components/signOutButton"
+import AuthButtons from "@/components/AuthButton"
 //PfRaqPY0pzNz39Fc
 export default function LandingPage() {
   return (
@@ -25,7 +27,12 @@ export default function LandingPage() {
               Testimonials
             </a>
           </nav>
+          <nav className="gap-4 flex justify-center items-center">
+          <a href="/signup">Signup</a>
+          {/*<SignOutButton/>*/}
           <Button>Install Extension</Button>
+
+          </nav>
         </div>
       </header>
       <main className="flex-1">
