@@ -9,7 +9,7 @@ declare namespace NodeJS {
 import { MongoClient } from "mongodb";
 
 declare global {
-  let _mongoClientPromise: Promise<MongoClient> | undefined;
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
 // This ensures the file is treated as a module.
