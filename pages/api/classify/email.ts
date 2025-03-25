@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 import { ObjectId } from "mongodb"
 import clientPromise from "@/lib/mongodb"
 import generateWithTunedModel from "../components/generateWithTunedModel"
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
+//const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 export default async function email(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
