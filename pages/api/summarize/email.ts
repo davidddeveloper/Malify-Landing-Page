@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import { verifyToken } from "@/lib/auth"
-import { GoogleGenerativeAI } from "@google/generative-ai"
+//import { GoogleGenerativeAI } from "@google/generative-ai"
 import { ObjectId } from "mongodb"
 import clientPromise from "@/lib/mongodb"
 import generateWithTunedModel from "../components/generateWithTunedModel"
