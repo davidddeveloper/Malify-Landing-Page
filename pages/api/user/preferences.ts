@@ -3,19 +3,19 @@ import clientPromise from "@/lib/mongodb"
 import { ObjectId } from "mongodb"
 import { getToken } from "next-auth/jwt"
 
-interface ImportantEmailRule {
-  id: string
-  type: "sender" | "subject" | "content"
-  value: string
-  priority: "high" | "medium" | "low"
-}
+//interface ImportantEmailRule {
+//  id: string
+//  type: "sender" | "subject" | "content"
+//  value: string
+//  priority: "high" | "medium" | "low"
+//}
 
-interface ScheduledAlert {
-  id: string
-  date: Date
-  description: string
-  isActive: boolean
-}
+//interface ScheduledAlert {
+//  id: string
+//  date: Date
+//  description: string
+//  isActive: boolean
+//}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = await getToken({ req })
@@ -59,7 +59,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { theme, emailFrequency, notificationPreferences, importantEmailRules, scheduledAlerts } = req.body
 
     try {
-      const result = await db.collection("preferences").updateOne(
+      //const result = 
+      await db.collection("preferences").updateOne(
         { userId: new ObjectId(token.sub) },
         {
           $set: {

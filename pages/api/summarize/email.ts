@@ -58,7 +58,7 @@ export default async function email(req: NextApiRequest, res: NextApiResponse) {
 
     console.log('summarizing in progress.....')
     // Generate email summary
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" })
+    //const model = genAI.getGenerativeModel({ model: "gemini-pro" })
 
     //const result = await model.generateContent(`Summarize this email: ${emailContent}`)
     //const summary = result.response.text()

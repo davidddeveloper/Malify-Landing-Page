@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const client = await clientPromise
   const db = client.db()
 
-  const { type, value, priority } = await req.body;
+  //const { type, value, priority } = await req.body;
 
   if (req.method === "POST") {
     const { type, value, priority } = req.body

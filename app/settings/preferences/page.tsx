@@ -43,7 +43,7 @@ interface Preferences {
 }
 
 export default function PreferencesPage() {
-  const { data: session, status } = useSession()
+  //const { data: session, status } = useSession()
   const router = useRouter()
 
   const [importantRules, setImportantRules] = useState<ImportantEmailRule[]>([])

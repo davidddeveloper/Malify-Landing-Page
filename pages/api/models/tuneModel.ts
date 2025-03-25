@@ -3,7 +3,7 @@ import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 import { verifyToken } from "@/lib/auth"
 import model from "../components/tuneModel"
-import generateWithTunedModel from "../components/generateWithTunedModel"
+//import generateWithTunedModel from "../components/generateWithTunedModel"
 
 const tuneModel = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === "GET") {

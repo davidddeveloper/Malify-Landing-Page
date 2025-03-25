@@ -1,19 +1,19 @@
 import { google } from "googleapis";
 import { NextApiRequest, NextApiResponse } from "next";
-import { getServerSession } from "next-auth";
+//import { getServerSession } from "next-auth";
 import { getSession } from "next-auth/react";
-import authOptions from "./auth/[...nextauth]"; // Path to NextAuth options
+//import authOptions from "./auth/[...nextauth]"; // Path to NextAuth options
 import extractBody from "./components/extractBody"
 import { getToken } from "next-auth/jwt"
 
-interface Email {
-    id: string;
-    snippet: string;
-    subject: string;
-    from: string;
-    date: string;
-    body: string;
-}
+//interface Email {
+//    id: string;
+//    snippet: string;
+//    subject: string;
+//    from: string;
+//    date: string;
+//    body: string;
+//}
 
 interface MessagePayload {
     headers: { name: string; value: string }[];

@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const client = await clientPromise
   const db = client.db()
 
-  const { date, description } = await req.body;
+  //const { date, description } = await req.body;
 
     
 

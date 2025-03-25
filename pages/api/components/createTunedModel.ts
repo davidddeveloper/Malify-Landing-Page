@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 //import fetch from 'node-fetch';
 import TrainingData from '@/data/trainingData';
 import ClassificationData from '@/data/classificationData';
