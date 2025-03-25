@@ -20,10 +20,6 @@ export default function SignupPage() {
   console.log(error)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically handle form submission
-    // For this example, we'll just log the data
-    //console.log({ email, firstName, lastName, password, confirmPassword })
     e.preventDefault();
     if (password !== confirmPassword) {
       setError("Passwords do not match");
@@ -37,8 +33,13 @@ export default function SignupPage() {
         firstName,
         lastName
       });
-      if (response.status === 201) {
-        // Automatically sign in the user after successful registration
+      console.log('this is the response', response)
+      if (response.status === 200 && response.data.authUrl) {
+        // Manually redirect to Gmail OAuth2 flow
+        console.log("redirecting")
+        window.location.href = response.data.authUrl;
+      } else {
+        // If OAuth is not needed, sign in the user
         signIn("credentials", { email, password });
       }
     } catch (error: any) {

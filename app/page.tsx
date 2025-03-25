@@ -7,8 +7,11 @@ import Image from "next/image"
 import MalifyImage from "@/public/images/malify-extension.png"
 import SignOutButton from "@/components/signOutButton"
 import AuthButtons from "@/components/AuthButton"
+import {getSession} from "next-auth/react"
+import EmailList from "@/components/EmailList";
 //PfRaqPY0pzNz39Fc
 export default function LandingPage() {
+  
   return (
     <div className="flex flex-col min-h-screen">
       <header className="border-b">
@@ -16,6 +19,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Mail className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold">Mailify</span>
+            <p className="py-1 px-3 bg-blue-500 rounded-2xl text-white md:hidden">Welcome back David</p>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#features" className="text-sm font-medium hover:underline underline-offset-4">
@@ -37,6 +41,7 @@ export default function LandingPage() {
         </div>
       </header>
       <main className="flex-1">
+      <div className="top-10 right-10 bg-blue-300 p-4 text-white hidden lg:block">Welcome <span>David</span></div>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -220,6 +225,9 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+        <div>
+          {/*<EmailList />*/}
+        </div>
       </main>
       <footer className="border-t">
         <div className="container flex flex-col gap-4 py-10 px-4 md:px-6">

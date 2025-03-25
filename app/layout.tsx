@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react"
+//import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
+//import logo from '@/app/logo.png'
+import { Toaster } from "@/components/ui/sonner"
+import AuthProvider from "@/components/providers/session-provider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="shortcut icon" href="/logo.png" type="image/png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AuthProvider>
         {children}
-        <Analytics />
+        {/*<Analytics />*/}
+        <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );
